@@ -68,7 +68,7 @@ After the use of undersampling, the training result drops to 0.67, and the test 
 Testing with undersample: 0.5517241379310345 The best model is logistic regression. 
 
 ## IMPROVEMENTS
-
+HOW MODEL PIPELINEING CAN BE IMPROVED:
 To achieve the optimal user experience, using more capable hardware and moving the text extraction process from the cloud to the device would be essential. This would reduce the processing time and give access to the outputs of all of the modules of the text extraction pipeline, which would, in turn, enable the following features:
 1. User-guided reading (e.g. read big text first, or read the text the user is pointing at)
 2. Better support for languages other than English
@@ -76,6 +76,12 @@ To achieve the optimal user experience, using more capable hardware and moving t
 4. Passive text detection (auditory cue on text detection, perhaps with additional information encoded in the tone and volume)
 
 The user experience could also be improved significantly by using MXNet, which is a deep learning library that is better optimized for mobile devices than TensorFlow. The speedup wouldn’t be enough for running text extraction on the device, but it would reduce the classification delay significantly. 
+
+UNDERSAMPLING: HOW IT HELPED?
+Dealing with imbalanced datasets in this project required strategies such as using classification algorithms or balancing classes in the training data (data preprocessing) before providing the data as input to the machine learning algorithm.Undersampling helped to balance class distribution by randomly eliminating majority class examples.This is done until the majority and minority class instances are balanced out.
+
+
+
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
