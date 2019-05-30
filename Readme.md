@@ -42,6 +42,20 @@ Sparkify is a music app, this dataset contains two months of sparkify user behav
 
 According to the results of the model, it is the frequency of Thumbs Down that has the greatest impact. Churn users have more Thumbs Down. Naturally, users will leave if they are not satisfied.
 
+The result is not ideal, the recall rate of the model is very low, even the recall rate of the tree model is 0. I decided to undersample the training data, balance the categories of the training set to increase the recall rate and improve f1.
+
+There is a strange problem here. Training results through cross-validation is good, but testing with validation sets is very poor. Logistic regression for example, the training result F1 score is 0.75, and the test result F1 score is 0.4. After the use of undersampling, the training result drops to 0.67, and the test result is 0.55.
+
+F1 result:
+Training: 0.758073899263998
+Testing: 0.4
+​
+Training with undersample: 0.6696185966538797
+Testing with undersample: 0.5517241379310345
+The best model is logistic regression. According to the results of the model, it is the frequency of Thumbs Down that has the greatest impact. Churn users have more Thumbs Down. Naturally, users will leave if they are not satisfied.
+
+Besides, the frequency of downgrade pages is also a big factor. I think this is because users hate the downgrade prompt. Registration time is also a factor, the longer the registration time users will not leave.
+
 I post a blog about the detail, you can find it [here](https://medium.com/@kriti_agrawal02/predicting-user-churn-with-pyspark-193c9a3eb00e).
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
